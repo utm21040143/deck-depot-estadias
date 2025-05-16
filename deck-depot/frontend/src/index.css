@@ -1,0 +1,178 @@
+:root {
+  --color-principal: #f6a93d;
+  --color-secundario: #cb852e;
+  --color-acento: #a1601f;
+  --color-acento-oscuro: #773c0f;
+  --color-título: #4d1800;
+  --color-fondo: #ffffff;
+  --color-texto: #333333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+  }
+}
+
+/* BARRA SUPERIOR */
+.top-bar {
+  background-color: #000;
+  color: #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 1.5rem;
+  font-size: 0.9rem;
+
+  border-bottom-left-radius: 20px; /* solo curva izquierda */
+  border-bottom-right-radius: 0;
+
+  width: 85%;
+  max-width: 1400px;
+  margin-left: auto;     /* lo empuja a la derecha */
+  margin-right: 2rem;    /* ajusta margen desde el borde */
+  margin-top: 0.5rem;
+  position: relative;
+  z-index: 10;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+.top-bar .telefono {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-style: italic;
+}
+
+.top-bar .icon {
+  color: #25D366; /* verde WhatsApp */
+  font-size: 1.1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.social-icons svg:hover {
+  color: var(--color-principal);
+  cursor: pointer;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--color-fondo);
+  color: rgb(12, 12, 12);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar nav ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar nav ul li a:hover {
+  background-color: var(--color-principal);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* HERO */
+.hero {
+  background: linear-gradient(to right, var(--color-principal), var(--color-secundario));
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero .contenido h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero .contenido p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.cta {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-acento);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* PRODUCTOS */
+.productos {
+  padding: 2rem;
+}
+
+.producto-card {
+  border: 1px solid #ddd;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+ .logo {
+     width: 250px; 
+     height: 100px; 
+     background-image: url("https://deckdepot.mx/wp-content/uploads/2025/01/cropped-pruebas-logo_Mesa-de-trabajo-1-copia.webp");
+     background-size: contain; 
+     background-repeat: no-repeat; 
+     background-position: center;
+   }
