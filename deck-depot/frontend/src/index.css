@@ -113,41 +113,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
-/* HERO */
-.hero {
-  background: linear-gradient(to right, var(--color-principal), var(--color-secundario));
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  padding: 2rem;
-}
-
-.hero .contenido h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero .contenido p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: auto;
-}
-
-.cta {
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--color-acento);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
 /* PRODUCTOS */
 .productos {
   padding: 2rem;
@@ -176,3 +141,147 @@ body {
      background-repeat: no-repeat; 
      background-position: center;
    }
+
+.banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.banner img {
+  width: 98%;
+  max-width: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.banner-container {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.banner-container img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.banner-texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  width: 80%;
+}
+
+.banner-texto h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.banner-texto p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .banner-texto h2 {
+    font-size: 1.4rem;
+  }
+
+  .banner-texto p {
+    font-size: 0.9rem;
+  }
+}
+
+.contacto-flotante {
+  position: fixed;
+  top: 40%;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  z-index: 999;
+}
+
+.contacto-flotante a {
+  background-color: var(--color-principal);
+  color: white;
+  padding: 0.75rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.contacto-flotante a:hover {
+  background-color: var(--color-acento);
+}
+
+.banner-informativo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  justify-content: center;
+  background-color: #f3f3f3;
+}
+
+.bloque {
+  flex: 1 1 300px;
+  padding: 1.5rem;
+  border: 2px solid var(--color-principal);
+  border-radius: 6px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.bloque.icono {
+  max-width: 300px;
+  justify-content: center;
+}
+
+.icono-bloque {
+  font-size: 2.5rem;
+  color: var(--color-principal);
+  margin-bottom: 0.5rem;
+}
+
+.bloque.texto {
+  text-align: left;
+  background-color: #333;
+  color: white;
+  border-left: 6px solid var(--color-principal);
+}
+
+.bloque.texto p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.resaltado {
+  color: var(--color-principal);
+  font-weight: bold;
+}
+
+.destacado {
+  font-weight: bold;
+}
